@@ -1,0 +1,119 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #1e1e2f;
+    color: #ffffff;
+}
+
+header {
+    background: #000021;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 28px;
+    color: #00d2d3;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #00d2d3;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #03a9f4;
+}
+
+.aqi-highlight {
+    text-align: center;
+    padding: 40px;
+    background: #25274d;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.aqi-card {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    background: #1e1e2f;
+    border: 1px solid #00d2d3;
+    border-radius: 10px;
+}
+
+.aqi-info h2, .aqi-info p {
+    margin: px 0;
+}
+
+.weather-info {
+    text-align: center;
+}
+
+.weather-icon {
+    width: 90px;
+    margin-bottom: 10px;
+}
+
+.aqi-scale {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 18px;
+    color: #aaaaaa;
+}
+
+
+.other-cities {
+    padding: 20px;
+    text-align: center;
+}
+
+.city-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.city-card {
+    background: #1e1e2f;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #00d2d3;
+}
+
+
+#about {
+    padding: 20px;
+    text-align: center;
+}
+
+.about-image {
+    width: 100%;
+    max-width: 800px;
+    margin: 30px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #1a1a2e;
+    border-top: 2px solid #25274d;
+    color: #00d2d3;
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select State - AQI Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://environmental-initiative.org/wp-content/uploads/2022/05/WordPress_AQI_202222.png'); 
+            background-size: cover;
+            background-position: contain;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background-color: rgba(24, 24, 24, 0.7);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav {
+            background-color: rgba(6, 1, 1, 0.7);
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: rgb(255, 255, 255);
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(143, 255, 132, 0.8);
+            border-radius: 8px;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 28px;
+            margin-top: 20px;
+        }
+        select {
+            font-size: 18px;
+            padding: 10px;
+            width: 200px;
+            margin-bottom: 20px;
+        }
+        .aqi-image {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .aqi-image img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Select Your State to View AQI Images</h1>
+    </header>
+
+    <nav>
+        <a href="home12.html">Home</a>
+        <a href="aboutus123.html">About Us</a>
+    </nav>
+
+    <div class="container">
+        <h2>Select Your State</h2>
+        <select id="stateSelect" onchange="showAQIImage()">
+            <option value="">--Select State--</option>
+            <option value="city1">Delhi</option>
+            <option value="city2">Mumbai</option>
+            <option value="city3">Kolkata</option>
+            <option value="city4">Chennai</option>
+            <option value="city5">Hyderabad</option>
+        </select>
+
+        <div class="aqi-image" id="aqiImageContainer" style="display:none;">
+            <h2>Current AQI for <span id="stateName"></span></h2>
+            <img id="aqiImage" src="" alt="AQI Image">
+        </div>
+    </div>
+
+    <script>
+        function showAQIImage() {
+            const state = document.getElementById("stateSelect").value;
+            const stateName = document.getElementById("stateName");
+            const aqiImageContainer = document.getElementById("aqiImageContainer");
+            const aqiImage = document.getElementById("aqiImage");
+
+            if (state) {
+                stateName.textContent = state.charAt(0).toUpperCase() + state.slice(1); 
+                aqiImageContainer.style.display = "block";
+
+                
+                const stateAQIImages = {
+                    city1: "https://www.hindustantimes.com/static/ht2023/11/0211_pg4.jpg",
+                    city2: "https://media.springernature.com/lw685/springer-static/image/chp%3A10.1007%2F978-3-030-55092-9_13/MediaObjects/492893_1_En_13_Fig3_HTML.png",
+                    city3: "https://indiaairquality.info/wp-content/uploads/anime/pm25_04_WB.png",
+                    city4: "https://images.news18.com/ibnlive/uploads/2023/11/chennai-2023-11-5c822aa0796a581c47fd90c3532be769.png",
+                    city5: "https://images.news18.com/ibnlive/uploads/2023/11/hyderabad-2023-11-03833ba98f04b8cf7e8fbca5d55b977f.png"
+                };
+
+              
+                aqiImage.src = stateAQIImages[state];
+            } else {
+                aqiImageContainer.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

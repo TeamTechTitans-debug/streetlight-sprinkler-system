@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
+.text{ 
+    font-family: 'poppins-bold', sans-serif !important;
+    font-size: 6.3rem;
+    line-height: 1.333;
+    margin-top: 0;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+BODY{
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+background-color:rgb(84, 84, 202);
+}
+
+h3{
+width: 420px;;
+background-color:rgb(12, 207, 61);
+color: #FFFFFF;
+
+}
+#h3.input-box{
+    font-size: 20px;
+    text-align: center;
+}
+
+input-box input{
+width:100%;
+height:100%;
+background:transparent;
+border:none;
+outline:none;
+border: 2px solid rgba(255,255,255,2);
+border: radius 40px;
+
+}
+
+BODY{
+background-image:url("https://t3.ftcdn.net/jpg/09/55/35/86/360_F_955358601_XV6nel2vEN1xZDNKbo7Bgx6fmo8zRn4Q.jpg");
+}
